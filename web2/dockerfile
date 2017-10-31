@@ -1,0 +1,6 @@
+FROM nginx:latest
+MAINTAINER Eugene <eugene.timmy@gmail.com>
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN mkdir /usr/share/nginx/web2html 
+RUN echo 'Hello World' > /usr/share/nginx/web2html/index.html
+EXPOSE 8080
